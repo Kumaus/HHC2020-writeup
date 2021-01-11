@@ -1,0 +1,36 @@
+guest@8922ae56a25f:~$ tshark -nni eth0
+Capturing on 'eth0'
+    1 0.000000000 4c:24:57:ab:ed:84 → ff:ff:ff:ff:ff:ff ARP 42 Who has 10.6.6.53? Tell 10.6.6.35
+    2 1.039971650 4c:24:57:ab:ed:84 → ff:ff:ff:ff:ff:ff ARP 42 Who has 10.6.6.53? Tell 10.6.6.35
+    3 2.100206333 4c:24:57:ab:ed:84 → ff:ff:ff:ff:ff:ff ARP 42 Who has 10.6.6.53? Tell 10.6.6.35
+    4 3.131916877 4c:24:57:ab:ed:84 → ff:ff:ff:ff:ff:ff ARP 42 Who has 10.6.6.53? Tell 10.6.6.35
+    5 4.180021091 4c:24:57:ab:ed:84 → ff:ff:ff:ff:ff:ff ARP 42 Who has 10.6.6.53? Tell 10.6.6.35
+    6 5.231959239 4c:24:57:ab:ed:84 → ff:ff:ff:ff:ff:ff ARP 42 Who has 10.6.6.53? Tell 10.6.6.35
+    7 6.291981985 4c:24:57:ab:ed:84 → ff:ff:ff:ff:ff:ff ARP 42 Who has 10.6.6.53? Tell 10.6.6.35
+    8 6.324077291 02:42:0a:06:00:07 → 4c:24:57:ab:ed:84 ARP 42 10.6.6.53 is at 02:42:0a:06:00:07
+    9 6.352963129    10.6.6.35 → 10.6.6.53    DNS 74 Standard query 0x0000 A ftp.osuosl.org
+   10 6.385000826    10.6.6.53 → 10.6.6.35    DNS 104 Standard query response 0x0000 A ftp.osuosl.org A 10.6.0.7
+   11 6.390995509 02:42:0a:06:00:07 → ff:ff:ff:ff:ff:ff ARP 42 Who has 10.6.6.35? Tell 10.6.0.7
+   12 6.391112256 4c:24:57:ab:ed:84 → 02:42:0a:06:00:07 ARP 42 10.6.6.35 is at 4c:24:57:ab:ed:84
+   13 6.391116580     10.6.0.7 → 10.6.6.35    TCP 74 51978 → 64352 [SYN] Seq=0 Win=64240 Len=0 MSS=1460 SACK_PERM=1 TSval=2813365991 TSecr=0 WS=128
+   14 6.391164757    10.6.6.35 → 10.6.0.7     TCP 74 64352 → 51978 [SYN, ACK] Seq=0 Ack=1 Win=65160 Len=0 MSS=1460 SACK_PERM=1 TSval=1481426581 TSecr=2813365991 WS=128
+   15 6.391182511     10.6.0.7 → 10.6.6.35    TCP 66 51978 → 64352 [ACK] Seq=1 Ack=1 Win=64256 Len=0 TSval=2813365991 TSecr=1481426581
+   16 6.393919961     10.6.0.7 → 10.6.6.35    TLSv1 583 Client Hello
+   17 6.393972008    10.6.6.35 → 10.6.0.7     TCP 66 64352 → 51978 [ACK] Seq=1 Ack=518 Win=64768 Len=0 TSval=1481426584 TSecr=2813365994
+   18 6.396093054    10.6.6.35 → 10.6.0.7     TLSv1.3 1579 Server Hello, Change Cipher Spec, Application Data, Application Data, Application Data, Application Data
+   19 6.396107363     10.6.0.7 → 10.6.6.35    TCP 66 51978 → 64352 [ACK] Seq=518 Ack=1514 Win=64128 Len=0 TSval=2813365996 TSecr=1481426586
+   20 6.396664690     10.6.0.7 → 10.6.6.35    TLSv1.3 146 Change Cipher Spec, Application Data
+   21 6.396974273    10.6.6.35 → 10.6.0.7     TLSv1.3 321 Application Data
+   22 6.397063741     10.6.0.7 → 10.6.6.35    TLSv1.3 278 Application Data
+   23 6.397092303    10.6.6.35 → 10.6.0.7     TLSv1.3 321 Application Data
+   24 6.402606855    10.6.6.35 → 10.6.0.7     TCP 74 48442 → 80 [SYN] Seq=0 Win=64240 Len=0 MSS=1460 SACK_PERM=1 TSval=1481426593 TSecr=0 WS=128
+   25 6.402631706     10.6.0.7 → 10.6.6.35    TCP 54 80 → 48442 [RST, ACK] Seq=1 Ack=1 Win=0 Len=0
+   26 6.403934015    10.6.6.35 → 10.6.0.7     TLSv1.3 286 Application Data, Application Data, Application Data
+   27 6.404951375     10.6.0.7 → 10.6.6.35    TCP 66 51978 → 64352 [ACK] Seq=810 Ack=2245 Win=64128 Len=0 TSval=2813366005 TSecr=1481426587
+   28 6.405071504     10.6.0.7 → 10.6.6.35    TCP 66 51978 → 64352 [FIN, ACK] Seq=810 Ack=2245 Win=64128 Len=0 TSval=2813366005 TSecr=1481426587
+   29 6.405096223    10.6.6.35 → 10.6.0.7     TCP 66 64352 → 51978 [ACK] Seq=2245 Ack=811 Win=64640 Len=0 TSval=1481426595 TSecr=2813366005
+   30 7.356018081 4c:24:57:ab:ed:84 → ff:ff:ff:ff:ff:ff ARP 42 Who has 10.6.6.53? Tell 10.6.6.35
+   31 8.411950892 4c:24:57:ab:ed:84 → ff:ff:ff:ff:ff:ff ARP 42 Who has 10.6.6.53? Tell 10.6.6.35
+   32 9.443948157 4c:24:57:ab:ed:84 → ff:ff:ff:ff:ff:ff ARP 42 Who has 10.6.6.53? Tell 10.6.6.35
+   33 10.483979240 4c:24:57:ab:ed:84 → ff:ff:ff:ff:ff:ff ARP 42 Who has 10.6.6.53? Tell 10.6.6.35
+^C33 packets captured

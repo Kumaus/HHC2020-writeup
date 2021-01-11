@@ -1,0 +1,891 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Snowball Fight</title>
+    <link rel="stylesheet" type="text/css" href="/static/snowstyle.css">
+  </head>
+  <body>
+    <div class="game-parent">
+      <h2 class="enemy" id="EnemyLookout" style="background-color: #f4f300;">Enemy</h2>
+      <div class="snow-field">
+        <div class="grid-container">
+          
+          <div class="enemycell" id="0,0,0" onclick="clickCell(this)" data-x="0" data-y="0">0,0</div>
+          <div class="enemycell" id="0,1,0" onclick="clickCell(this)" data-x="1" data-y="0">1,0</div>
+          <div class="enemycell" id="0,2,0" onclick="clickCell(this)" data-x="2" data-y="0">2,0</div>
+          <div class="enemycell" id="0,3,0" onclick="clickCell(this)" data-x="3" data-y="0">3,0</div>
+          <div class="enemycell" id="0,4,0" onclick="clickCell(this)" data-x="4" data-y="0">4,0</div>
+          <div class="enemycell" id="0,5,0" onclick="clickCell(this)" data-x="5" data-y="0">5,0</div>
+          <div class="enemycell" id="0,6,0" onclick="clickCell(this)" data-x="6" data-y="0">6,0</div>
+          <div class="enemycell" id="0,7,0" onclick="clickCell(this)" data-x="7" data-y="0">7,0</div>
+          <div class="enemycell" id="0,8,0" onclick="clickCell(this)" data-x="8" data-y="0">8,0</div>
+          <div class="enemycell" id="0,9,0" onclick="clickCell(this)" data-x="9" data-y="0">9,0</div>
+          
+          <div class="enemycell" id="0,0,1" onclick="clickCell(this)" data-x="0" data-y="1">0,1</div>
+          <div class="enemycell" id="0,1,1" onclick="clickCell(this)" data-x="1" data-y="1">1,1</div>
+          <div class="enemycell" id="0,2,1" onclick="clickCell(this)" data-x="2" data-y="1">2,1</div>
+          <div class="enemycell" id="0,3,1" onclick="clickCell(this)" data-x="3" data-y="1">3,1</div>
+          <div class="enemycell" id="0,4,1" onclick="clickCell(this)" data-x="4" data-y="1">4,1</div>
+          <div class="enemycell" id="0,5,1" onclick="clickCell(this)" data-x="5" data-y="1">5,1</div>
+          <div class="enemycell" id="0,6,1" onclick="clickCell(this)" data-x="6" data-y="1">6,1</div>
+          <div class="enemycell" id="0,7,1" onclick="clickCell(this)" data-x="7" data-y="1">7,1</div>
+          <div class="enemycell" id="0,8,1" onclick="clickCell(this)" data-x="8" data-y="1">8,1</div>
+          <div class="enemycell" id="0,9,1" onclick="clickCell(this)" data-x="9" data-y="1">9,1</div>
+          
+          <div class="enemycell" id="0,0,2" onclick="clickCell(this)" data-x="0" data-y="2">0,2</div>
+          <div class="enemycell" id="0,1,2" onclick="clickCell(this)" data-x="1" data-y="2">1,2</div>
+          <div class="enemycell" id="0,2,2" onclick="clickCell(this)" data-x="2" data-y="2">2,2</div>
+          <div class="enemycell" id="0,3,2" onclick="clickCell(this)" data-x="3" data-y="2">3,2</div>
+          <div class="enemycell" id="0,4,2" onclick="clickCell(this)" data-x="4" data-y="2">4,2</div>
+          <div class="enemycell" id="0,5,2" onclick="clickCell(this)" data-x="5" data-y="2">5,2</div>
+          <div class="enemycell" id="0,6,2" onclick="clickCell(this)" data-x="6" data-y="2">6,2</div>
+          <div class="enemycell" id="0,7,2" onclick="clickCell(this)" data-x="7" data-y="2">7,2</div>
+          <div class="enemycell" id="0,8,2" onclick="clickCell(this)" data-x="8" data-y="2">8,2</div>
+          <div class="enemycell" id="0,9,2" onclick="clickCell(this)" data-x="9" data-y="2">9,2</div>
+          
+          <div class="enemycell" id="0,0,3" onclick="clickCell(this)" data-x="0" data-y="3">0,3</div>
+          <div class="enemycell" id="0,1,3" onclick="clickCell(this)" data-x="1" data-y="3">1,3</div>
+          <div class="enemycell" id="0,2,3" onclick="clickCell(this)" data-x="2" data-y="3">2,3</div>
+          <div class="enemycell" id="0,3,3" onclick="clickCell(this)" data-x="3" data-y="3">3,3</div>
+          <div class="enemycell" id="0,4,3" onclick="clickCell(this)" data-x="4" data-y="3">4,3</div>
+          <div class="enemycell" id="0,5,3" onclick="clickCell(this)" data-x="5" data-y="3">5,3</div>
+          <div class="enemycell" id="0,6,3" onclick="clickCell(this)" data-x="6" data-y="3">6,3</div>
+          <div class="enemycell" id="0,7,3" onclick="clickCell(this)" data-x="7" data-y="3">7,3</div>
+          <div class="enemycell" id="0,8,3" onclick="clickCell(this)" data-x="8" data-y="3">8,3</div>
+          <div class="enemycell" id="0,9,3" onclick="clickCell(this)" data-x="9" data-y="3">9,3</div>
+          
+          <div class="enemycell" id="0,0,4" onclick="clickCell(this)" data-x="0" data-y="4">0,4</div>
+          <div class="enemycell" id="0,1,4" onclick="clickCell(this)" data-x="1" data-y="4">1,4</div>
+          <div class="enemycell" id="0,2,4" onclick="clickCell(this)" data-x="2" data-y="4">2,4</div>
+          <div class="enemycell" id="0,3,4" onclick="clickCell(this)" data-x="3" data-y="4">3,4</div>
+          <div class="enemycell" id="0,4,4" onclick="clickCell(this)" data-x="4" data-y="4">4,4</div>
+          <div class="enemycell" id="0,5,4" onclick="clickCell(this)" data-x="5" data-y="4">5,4</div>
+          <div class="enemycell" id="0,6,4" onclick="clickCell(this)" data-x="6" data-y="4">6,4</div>
+          <div class="enemycell" id="0,7,4" onclick="clickCell(this)" data-x="7" data-y="4">7,4</div>
+          <div class="enemycell" id="0,8,4" onclick="clickCell(this)" data-x="8" data-y="4">8,4</div>
+          <div class="enemycell" id="0,9,4" onclick="clickCell(this)" data-x="9" data-y="4">9,4</div>
+          
+          <div class="enemycell" id="0,0,5" onclick="clickCell(this)" data-x="0" data-y="5">0,5</div>
+          <div class="enemycell" id="0,1,5" onclick="clickCell(this)" data-x="1" data-y="5">1,5</div>
+          <div class="enemycell" id="0,2,5" onclick="clickCell(this)" data-x="2" data-y="5">2,5</div>
+          <div class="enemycell" id="0,3,5" onclick="clickCell(this)" data-x="3" data-y="5">3,5</div>
+          <div class="enemycell" id="0,4,5" onclick="clickCell(this)" data-x="4" data-y="5">4,5</div>
+          <div class="enemycell" id="0,5,5" onclick="clickCell(this)" data-x="5" data-y="5">5,5</div>
+          <div class="enemycell" id="0,6,5" onclick="clickCell(this)" data-x="6" data-y="5">6,5</div>
+          <div class="enemycell" id="0,7,5" onclick="clickCell(this)" data-x="7" data-y="5">7,5</div>
+          <div class="enemycell" id="0,8,5" onclick="clickCell(this)" data-x="8" data-y="5">8,5</div>
+          <div class="enemycell" id="0,9,5" onclick="clickCell(this)" data-x="9" data-y="5">9,5</div>
+          
+          <div class="enemycell" id="0,0,6" onclick="clickCell(this)" data-x="0" data-y="6">0,6</div>
+          <div class="enemycell" id="0,1,6" onclick="clickCell(this)" data-x="1" data-y="6">1,6</div>
+          <div class="enemycell" id="0,2,6" onclick="clickCell(this)" data-x="2" data-y="6">2,6</div>
+          <div class="enemycell" id="0,3,6" onclick="clickCell(this)" data-x="3" data-y="6">3,6</div>
+          <div class="enemycell" id="0,4,6" onclick="clickCell(this)" data-x="4" data-y="6">4,6</div>
+          <div class="enemycell" id="0,5,6" onclick="clickCell(this)" data-x="5" data-y="6">5,6</div>
+          <div class="enemycell" id="0,6,6" onclick="clickCell(this)" data-x="6" data-y="6">6,6</div>
+          <div class="enemycell" id="0,7,6" onclick="clickCell(this)" data-x="7" data-y="6">7,6</div>
+          <div class="enemycell" id="0,8,6" onclick="clickCell(this)" data-x="8" data-y="6">8,6</div>
+          <div class="enemycell" id="0,9,6" onclick="clickCell(this)" data-x="9" data-y="6">9,6</div>
+          
+          <div class="enemycell" id="0,0,7" onclick="clickCell(this)" data-x="0" data-y="7">0,7</div>
+          <div class="enemycell" id="0,1,7" onclick="clickCell(this)" data-x="1" data-y="7">1,7</div>
+          <div class="enemycell" id="0,2,7" onclick="clickCell(this)" data-x="2" data-y="7">2,7</div>
+          <div class="enemycell" id="0,3,7" onclick="clickCell(this)" data-x="3" data-y="7">3,7</div>
+          <div class="enemycell" id="0,4,7" onclick="clickCell(this)" data-x="4" data-y="7">4,7</div>
+          <div class="enemycell" id="0,5,7" onclick="clickCell(this)" data-x="5" data-y="7">5,7</div>
+          <div class="enemycell" id="0,6,7" onclick="clickCell(this)" data-x="6" data-y="7">6,7</div>
+          <div class="enemycell" id="0,7,7" onclick="clickCell(this)" data-x="7" data-y="7">7,7</div>
+          <div class="enemycell" id="0,8,7" onclick="clickCell(this)" data-x="8" data-y="7">8,7</div>
+          <div class="enemycell" id="0,9,7" onclick="clickCell(this)" data-x="9" data-y="7">9,7</div>
+          
+          <div class="enemycell" id="0,0,8" onclick="clickCell(this)" data-x="0" data-y="8">0,8</div>
+          <div class="enemycell" id="0,1,8" onclick="clickCell(this)" data-x="1" data-y="8">1,8</div>
+          <div class="enemycell" id="0,2,8" onclick="clickCell(this)" data-x="2" data-y="8">2,8</div>
+          <div class="enemycell" id="0,3,8" onclick="clickCell(this)" data-x="3" data-y="8">3,8</div>
+          <div class="enemycell" id="0,4,8" onclick="clickCell(this)" data-x="4" data-y="8">4,8</div>
+          <div class="enemycell" id="0,5,8" onclick="clickCell(this)" data-x="5" data-y="8">5,8</div>
+          <div class="enemycell" id="0,6,8" onclick="clickCell(this)" data-x="6" data-y="8">6,8</div>
+          <div class="enemycell" id="0,7,8" onclick="clickCell(this)" data-x="7" data-y="8">7,8</div>
+          <div class="enemycell" id="0,8,8" onclick="clickCell(this)" data-x="8" data-y="8">8,8</div>
+          <div class="enemycell" id="0,9,8" onclick="clickCell(this)" data-x="9" data-y="8">9,8</div>
+          
+          <div class="enemycell" id="0,0,9" onclick="clickCell(this)" data-x="0" data-y="9">0,9</div>
+          <div class="enemycell" id="0,1,9" onclick="clickCell(this)" data-x="1" data-y="9">1,9</div>
+          <div class="enemycell" id="0,2,9" onclick="clickCell(this)" data-x="2" data-y="9">2,9</div>
+          <div class="enemycell" id="0,3,9" onclick="clickCell(this)" data-x="3" data-y="9">3,9</div>
+          <div class="enemycell" id="0,4,9" onclick="clickCell(this)" data-x="4" data-y="9">4,9</div>
+          <div class="enemycell" id="0,5,9" onclick="clickCell(this)" data-x="5" data-y="9">5,9</div>
+          <div class="enemycell" id="0,6,9" onclick="clickCell(this)" data-x="6" data-y="9">6,9</div>
+          <div class="enemycell" id="0,7,9" onclick="clickCell(this)" data-x="7" data-y="9">7,9</div>
+          <div class="enemycell" id="0,8,9" onclick="clickCell(this)" data-x="8" data-y="9">8,9</div>
+          <div class="enemycell" id="0,9,9" onclick="clickCell(this)" data-x="9" data-y="9">9,9</div>
+          
+        </div>
+      </div>
+      <br>
+      <table>
+        <tr>
+          <td>Targeting:</td>
+          <td><input id="targetx" type="text" width="1"></td>
+          <td><input id="targety" type="text" width="1"></td>
+          <td><button id="fireBtn">FIRE!</button><button id="computerBtn" disabled>Computer</button> &lt;Enter&gt;</td>
+          <td><input id="statusVerify" type="hidden"><input id="statusDifficulty" type="hidden" value="3"></td>
+        </tr>
+      </table>
+      <h2 class="friendly" id="FriendlyLookout" style="background-color: #50de0c;">&lt;Redacted!&gt;</h2>
+      <div class="snow-field">
+        <div class="grid-container">
+          
+          <div class="friendlycell" id="1,0,0" data-x="0" data-y="0">0,0</div>
+          <div class="friendlycell" id="1,1,0" data-x="1" data-y="0">1,0</div>
+          <div class="friendlycell" id="1,2,0" data-x="2" data-y="0">2,0</div>
+          <div class="friendlycell" id="1,3,0" data-x="3" data-y="0">3,0</div>
+          <div class="friendlycell" id="1,4,0" data-x="4" data-y="0">4,0</div>
+          <div class="friendlycell" id="1,5,0" data-x="5" data-y="0">5,0</div>
+          <div class="friendlycell" id="1,6,0" data-x="6" data-y="0">6,0</div>
+          <div class="friendlycell" id="1,7,0" data-x="7" data-y="0">7,0</div>
+          <div class="friendlycell" id="1,8,0" data-x="8" data-y="0">8,0</div>
+          <div class="friendlycell" id="1,9,0" data-x="9" data-y="0">9,0</div>
+          
+          <div class="friendlycell" id="1,0,1" data-x="0" data-y="1">0,1</div>
+          <div class="friendlycell" id="1,1,1" data-x="1" data-y="1">1,1</div>
+          <div class="friendlycell" id="1,2,1" data-x="2" data-y="1">2,1</div>
+          <div class="friendlycell" id="1,3,1" data-x="3" data-y="1">3,1</div>
+          <div class="friendlycell" id="1,4,1" data-x="4" data-y="1">4,1</div>
+          <div class="friendlycell" id="1,5,1" data-x="5" data-y="1">5,1</div>
+          <div class="friendlycell" id="1,6,1" data-x="6" data-y="1">6,1</div>
+          <div class="friendlycell" id="1,7,1" data-x="7" data-y="1">7,1</div>
+          <div class="friendlycell" id="1,8,1" data-x="8" data-y="1">8,1</div>
+          <div class="friendlycell" id="1,9,1" data-x="9" data-y="1">9,1</div>
+          
+          <div class="friendlycell" id="1,0,2" data-x="0" data-y="2">0,2</div>
+          <div class="friendlycell" id="1,1,2" data-x="1" data-y="2">1,2</div>
+          <div class="friendlycell" id="1,2,2" data-x="2" data-y="2">2,2</div>
+          <div class="friendlycell" id="1,3,2" data-x="3" data-y="2">3,2</div>
+          <div class="friendlycell" id="1,4,2" data-x="4" data-y="2">4,2</div>
+          <div class="friendlycell" id="1,5,2" data-x="5" data-y="2">5,2</div>
+          <div class="friendlycell" id="1,6,2" data-x="6" data-y="2">6,2</div>
+          <div class="friendlycell" id="1,7,2" data-x="7" data-y="2">7,2</div>
+          <div class="friendlycell" id="1,8,2" data-x="8" data-y="2">8,2</div>
+          <div class="friendlycell" id="1,9,2" data-x="9" data-y="2">9,2</div>
+          
+          <div class="friendlycell" id="1,0,3" data-x="0" data-y="3">0,3</div>
+          <div class="friendlycell" id="1,1,3" data-x="1" data-y="3">1,3</div>
+          <div class="friendlycell" id="1,2,3" data-x="2" data-y="3">2,3</div>
+          <div class="friendlycell" id="1,3,3" data-x="3" data-y="3">3,3</div>
+          <div class="friendlycell" id="1,4,3" data-x="4" data-y="3">4,3</div>
+          <div class="friendlycell" id="1,5,3" data-x="5" data-y="3">5,3</div>
+          <div class="friendlycell" id="1,6,3" data-x="6" data-y="3">6,3</div>
+          <div class="friendlycell" id="1,7,3" data-x="7" data-y="3">7,3</div>
+          <div class="friendlycell" id="1,8,3" data-x="8" data-y="3">8,3</div>
+          <div class="friendlycell" id="1,9,3" data-x="9" data-y="3">9,3</div>
+          
+          <div class="friendlycell" id="1,0,4" data-x="0" data-y="4">0,4</div>
+          <div class="friendlycell" id="1,1,4" data-x="1" data-y="4">1,4</div>
+          <div class="friendlycell" id="1,2,4" data-x="2" data-y="4">2,4</div>
+          <div class="friendlycell" id="1,3,4" data-x="3" data-y="4">3,4</div>
+          <div class="friendlycell" id="1,4,4" data-x="4" data-y="4">4,4</div>
+          <div class="friendlycell" id="1,5,4" data-x="5" data-y="4">5,4</div>
+          <div class="friendlycell" id="1,6,4" data-x="6" data-y="4">6,4</div>
+          <div class="friendlycell" id="1,7,4" data-x="7" data-y="4">7,4</div>
+          <div class="friendlycell" id="1,8,4" data-x="8" data-y="4">8,4</div>
+          <div class="friendlycell" id="1,9,4" data-x="9" data-y="4">9,4</div>
+          
+          <div class="friendlycell" id="1,0,5" data-x="0" data-y="5">0,5</div>
+          <div class="friendlycell" id="1,1,5" data-x="1" data-y="5">1,5</div>
+          <div class="friendlycell" id="1,2,5" data-x="2" data-y="5">2,5</div>
+          <div class="friendlycell" id="1,3,5" data-x="3" data-y="5">3,5</div>
+          <div class="friendlycell" id="1,4,5" data-x="4" data-y="5">4,5</div>
+          <div class="friendlycell" id="1,5,5" data-x="5" data-y="5">5,5</div>
+          <div class="friendlycell" id="1,6,5" data-x="6" data-y="5">6,5</div>
+          <div class="friendlycell" id="1,7,5" data-x="7" data-y="5">7,5</div>
+          <div class="friendlycell" id="1,8,5" data-x="8" data-y="5">8,5</div>
+          <div class="friendlycell" id="1,9,5" data-x="9" data-y="5">9,5</div>
+          
+          <div class="friendlycell" id="1,0,6" data-x="0" data-y="6">0,6</div>
+          <div class="friendlycell" id="1,1,6" data-x="1" data-y="6">1,6</div>
+          <div class="friendlycell" id="1,2,6" data-x="2" data-y="6">2,6</div>
+          <div class="friendlycell" id="1,3,6" data-x="3" data-y="6">3,6</div>
+          <div class="friendlycell" id="1,4,6" data-x="4" data-y="6">4,6</div>
+          <div class="friendlycell" id="1,5,6" data-x="5" data-y="6">5,6</div>
+          <div class="friendlycell" id="1,6,6" data-x="6" data-y="6">6,6</div>
+          <div class="friendlycell" id="1,7,6" data-x="7" data-y="6">7,6</div>
+          <div class="friendlycell" id="1,8,6" data-x="8" data-y="6">8,6</div>
+          <div class="friendlycell" id="1,9,6" data-x="9" data-y="6">9,6</div>
+          
+          <div class="friendlycell" id="1,0,7" data-x="0" data-y="7">0,7</div>
+          <div class="friendlycell" id="1,1,7" data-x="1" data-y="7">1,7</div>
+          <div class="friendlycell" id="1,2,7" data-x="2" data-y="7">2,7</div>
+          <div class="friendlycell" id="1,3,7" data-x="3" data-y="7">3,7</div>
+          <div class="friendlycell" id="1,4,7" data-x="4" data-y="7">4,7</div>
+          <div class="friendlycell" id="1,5,7" data-x="5" data-y="7">5,7</div>
+          <div class="friendlycell" id="1,6,7" data-x="6" data-y="7">6,7</div>
+          <div class="friendlycell" id="1,7,7" data-x="7" data-y="7">7,7</div>
+          <div class="friendlycell" id="1,8,7" data-x="8" data-y="7">8,7</div>
+          <div class="friendlycell" id="1,9,7" data-x="9" data-y="7">9,7</div>
+          
+          <div class="friendlycell" id="1,0,8" data-x="0" data-y="8">0,8</div>
+          <div class="friendlycell" id="1,1,8" data-x="1" data-y="8">1,8</div>
+          <div class="friendlycell" id="1,2,8" data-x="2" data-y="8">2,8</div>
+          <div class="friendlycell" id="1,3,8" data-x="3" data-y="8">3,8</div>
+          <div class="friendlycell" id="1,4,8" data-x="4" data-y="8">4,8</div>
+          <div class="friendlycell" id="1,5,8" data-x="5" data-y="8">5,8</div>
+          <div class="friendlycell" id="1,6,8" data-x="6" data-y="8">6,8</div>
+          <div class="friendlycell" id="1,7,8" data-x="7" data-y="8">7,8</div>
+          <div class="friendlycell" id="1,8,8" data-x="8" data-y="8">8,8</div>
+          <div class="friendlycell" id="1,9,8" data-x="9" data-y="8">9,8</div>
+          
+          <div class="friendlycell" id="1,0,9" data-x="0" data-y="9">0,9</div>
+          <div class="friendlycell" id="1,1,9" data-x="1" data-y="9">1,9</div>
+          <div class="friendlycell" id="1,2,9" data-x="2" data-y="9">2,9</div>
+          <div class="friendlycell" id="1,3,9" data-x="3" data-y="9">3,9</div>
+          <div class="friendlycell" id="1,4,9" data-x="4" data-y="9">4,9</div>
+          <div class="friendlycell" id="1,5,9" data-x="5" data-y="9">5,9</div>
+          <div class="friendlycell" id="1,6,9" data-x="6" data-y="9">6,9</div>
+          <div class="friendlycell" id="1,7,9" data-x="7" data-y="9">7,9</div>
+          <div class="friendlycell" id="1,8,9" data-x="8" data-y="9">8,9</div>
+          <div class="friendlycell" id="1,9,9" data-x="9" data-y="9">9,9</div>
+          
+        </div>
+      </div>
+      <div id="wigwag">Some text some message.</div>
+    </div>
+  </body>
+  <script>
+    var Secure = true;
+    
+  </script>
+  <script type="text/javascript" src="/static/battlefort.js"></script>
+  
+  <!--
+    Seeds attempted:
+    
+    3090549483 - Not random enough
+    128121106 - Not random enough
+    781881482 - Not random enough
+    1368729342 - Not random enough
+    3998736224 - Not random enough
+    1680425843 - Not random enough
+    2961962125 - Not random enough
+    3944385979 - Not random enough
+    2434671819 - Not random enough
+    3287308007 - Not random enough
+    409924218 - Not random enough
+    650518991 - Not random enough
+    4239050945 - Not random enough
+    1919935912 - Not random enough
+    4130700965 - Not random enough
+    3074810622 - Not random enough
+    3247551664 - Not random enough
+    1013179158 - Not random enough
+    1287339795 - Not random enough
+    1853029208 - Not random enough
+    1004161031 - Not random enough
+    2550802291 - Not random enough
+    1427608463 - Not random enough
+    251847205 - Not random enough
+    4198578689 - Not random enough
+    3119903503 - Not random enough
+    2602882681 - Not random enough
+    970798894 - Not random enough
+    2151180385 - Not random enough
+    829733858 - Not random enough
+    2940635273 - Not random enough
+    29131129 - Not random enough
+    1719479819 - Not random enough
+    256869358 - Not random enough
+    2388990573 - Not random enough
+    323517788 - Not random enough
+    113549353 - Not random enough
+    2525711501 - Not random enough
+    130325715 - Not random enough
+    1955319463 - Not random enough
+    4038203398 - Not random enough
+    2283370175 - Not random enough
+    2799589396 - Not random enough
+    262267203 - Not random enough
+    369854820 - Not random enough
+    4053128141 - Not random enough
+    2299062028 - Not random enough
+    434105531 - Not random enough
+    2238822472 - Not random enough
+    3104085944 - Not random enough
+    1814069090 - Not random enough
+    3087626705 - Not random enough
+    3560554885 - Not random enough
+    321815181 - Not random enough
+    2882419865 - Not random enough
+    3631429075 - Not random enough
+    2076284783 - Not random enough
+    772545835 - Not random enough
+    1888888282 - Not random enough
+    531153482 - Not random enough
+    2302780190 - Not random enough
+    3580837299 - Not random enough
+    296303350 - Not random enough
+    552061724 - Not random enough
+    1643100119 - Not random enough
+    1766470556 - Not random enough
+    1398139307 - Not random enough
+    966408674 - Not random enough
+    2537967 - Not random enough
+    3447781446 - Not random enough
+    2309864759 - Not random enough
+    4072114959 - Not random enough
+    1469420896 - Not random enough
+    122323389 - Not random enough
+    1532050987 - Not random enough
+    2453125896 - Not random enough
+    2322396483 - Not random enough
+    1663274751 - Not random enough
+    1193276935 - Not random enough
+    1484369266 - Not random enough
+    1695664205 - Not random enough
+    4085156132 - Not random enough
+    2323319828 - Not random enough
+    2632149041 - Not random enough
+    797090667 - Not random enough
+    2562438707 - Not random enough
+    1527460672 - Not random enough
+    1452311131 - Not random enough
+    1432932660 - Not random enough
+    2153653774 - Not random enough
+    1676542447 - Not random enough
+    3402329347 - Not random enough
+    1652157529 - Not random enough
+    431473952 - Not random enough
+    3523881774 - Not random enough
+    3884362330 - Not random enough
+    3422438325 - Not random enough
+    810163408 - Not random enough
+    3180721180 - Not random enough
+    674700177 - Not random enough
+    3056854313 - Not random enough
+    1606980803 - Not random enough
+    4026331989 - Not random enough
+    1270987822 - Not random enough
+    4149905039 - Not random enough
+    3252160317 - Not random enough
+    2939462174 - Not random enough
+    2812092551 - Not random enough
+    4283926388 - Not random enough
+    1092678187 - Not random enough
+    419884804 - Not random enough
+    3634616037 - Not random enough
+    2474469712 - Not random enough
+    1553564119 - Not random enough
+    731169199 - Not random enough
+    1124717205 - Not random enough
+    1873524100 - Not random enough
+    425803808 - Not random enough
+    1514768964 - Not random enough
+    1416831546 - Not random enough
+    4225889834 - Not random enough
+    1913056021 - Not random enough
+    4195068117 - Not random enough
+    203498708 - Not random enough
+    1561655432 - Not random enough
+    415367183 - Not random enough
+    3294984855 - Not random enough
+    4121634703 - Not random enough
+    1311478837 - Not random enough
+    2608252635 - Not random enough
+    1022203979 - Not random enough
+    230973736 - Not random enough
+    472250985 - Not random enough
+    3158119799 - Not random enough
+    26367622 - Not random enough
+    3107948228 - Not random enough
+    3830152410 - Not random enough
+    1941741606 - Not random enough
+    2004706367 - Not random enough
+    3017145684 - Not random enough
+    1927527220 - Not random enough
+    308279932 - Not random enough
+    801758341 - Not random enough
+    2332895452 - Not random enough
+    3353714837 - Not random enough
+    3004082863 - Not random enough
+    2415523986 - Not random enough
+    2555257413 - Not random enough
+    3799390580 - Not random enough
+    1050438095 - Not random enough
+    3382115401 - Not random enough
+    1830550770 - Not random enough
+    3215044441 - Not random enough
+    686841117 - Not random enough
+    3201420320 - Not random enough
+    3359161226 - Not random enough
+    2399667541 - Not random enough
+    2405519171 - Not random enough
+    3213266315 - Not random enough
+    706167097 - Not random enough
+    2898867734 - Not random enough
+    2903110892 - Not random enough
+    3805744041 - Not random enough
+    3658398004 - Not random enough
+    2700402574 - Not random enough
+    2309254756 - Not random enough
+    913722482 - Not random enough
+    901098419 - Not random enough
+    1084764152 - Not random enough
+    2924671258 - Not random enough
+    1866102577 - Not random enough
+    368088887 - Not random enough
+    183184266 - Not random enough
+    2992429126 - Not random enough
+    1768499485 - Not random enough
+    1448451935 - Not random enough
+    3647001898 - Not random enough
+    2614643194 - Not random enough
+    4018633388 - Not random enough
+    762614366 - Not random enough
+    59176688 - Not random enough
+    1854900553 - Not random enough
+    2901293335 - Not random enough
+    1071601496 - Not random enough
+    3166118868 - Not random enough
+    1273530542 - Not random enough
+    622787024 - Not random enough
+    810149226 - Not random enough
+    3331787607 - Not random enough
+    3269522293 - Not random enough
+    4134332066 - Not random enough
+    1410705375 - Not random enough
+    55318828 - Not random enough
+    783356834 - Not random enough
+    339956318 - Not random enough
+    1380227203 - Not random enough
+    633049239 - Not random enough
+    713505663 - Not random enough
+    3802958666 - Not random enough
+    1465173080 - Not random enough
+    3724591042 - Not random enough
+    3988564732 - Not random enough
+    1638220986 - Not random enough
+    371067016 - Not random enough
+    3380175024 - Not random enough
+    1954585185 - Not random enough
+    2617052394 - Not random enough
+    746518754 - Not random enough
+    2033191254 - Not random enough
+    3573872380 - Not random enough
+    3253534847 - Not random enough
+    2657314053 - Not random enough
+    1451362080 - Not random enough
+    1620136681 - Not random enough
+    1414145195 - Not random enough
+    2788661877 - Not random enough
+    821630684 - Not random enough
+    3953417069 - Not random enough
+    4073656511 - Not random enough
+    3839977996 - Not random enough
+    3428192542 - Not random enough
+    3986915980 - Not random enough
+    1172210701 - Not random enough
+    3044664306 - Not random enough
+    424254379 - Not random enough
+    386376028 - Not random enough
+    3773284952 - Not random enough
+    3574521441 - Not random enough
+    689976215 - Not random enough
+    783854721 - Not random enough
+    1694000194 - Not random enough
+    860491380 - Not random enough
+    1327724957 - Not random enough
+    3490092025 - Not random enough
+    2331411123 - Not random enough
+    4211790813 - Not random enough
+    3218077396 - Not random enough
+    2817164273 - Not random enough
+    1745311256 - Not random enough
+    3237311135 - Not random enough
+    349748138 - Not random enough
+    651122016 - Not random enough
+    1109003196 - Not random enough
+    4123239189 - Not random enough
+    1165564418 - Not random enough
+    1091193766 - Not random enough
+    615865665 - Not random enough
+    2419096546 - Not random enough
+    1433729394 - Not random enough
+    852978873 - Not random enough
+    3481805541 - Not random enough
+    1409079632 - Not random enough
+    1677698934 - Not random enough
+    1700188710 - Not random enough
+    147693125 - Not random enough
+    566167804 - Not random enough
+    2846056618 - Not random enough
+    1003062028 - Not random enough
+    1128477679 - Not random enough
+    467631433 - Not random enough
+    2235082494 - Not random enough
+    2632613807 - Not random enough
+    1796750944 - Not random enough
+    3972139008 - Not random enough
+    1792212322 - Not random enough
+    2529922532 - Not random enough
+    1898483298 - Not random enough
+    120958875 - Not random enough
+    2514836173 - Not random enough
+    4219089887 - Not random enough
+    3451377719 - Not random enough
+    3345467162 - Not random enough
+    2518826997 - Not random enough
+    1857928971 - Not random enough
+    4259778931 - Not random enough
+    484680042 - Not random enough
+    1860295930 - Not random enough
+    1123388608 - Not random enough
+    1621008495 - Not random enough
+    2463103607 - Not random enough
+    126091197 - Not random enough
+    872315402 - Not random enough
+    2385485656 - Not random enough
+    1352789390 - Not random enough
+    104887577 - Not random enough
+    1606306513 - Not random enough
+    1008140909 - Not random enough
+    419279523 - Not random enough
+    2792878732 - Not random enough
+    241499398 - Not random enough
+    4032585269 - Not random enough
+    449883564 - Not random enough
+    2552890105 - Not random enough
+    284871391 - Not random enough
+    1691373164 - Not random enough
+    1529756720 - Not random enough
+    2589623635 - Not random enough
+    664042086 - Not random enough
+    345966377 - Not random enough
+    122047316 - Not random enough
+    3286883697 - Not random enough
+    2357596931 - Not random enough
+    634115758 - Not random enough
+    3712152885 - Not random enough
+    2483237923 - Not random enough
+    2233895781 - Not random enough
+    2258904650 - Not random enough
+    201201649 - Not random enough
+    1115600804 - Not random enough
+    2368740814 - Not random enough
+    4145287933 - Not random enough
+    3012110937 - Not random enough
+    11637165 - Not random enough
+    561927263 - Not random enough
+    1439939198 - Not random enough
+    966867816 - Not random enough
+    1489728813 - Not random enough
+    4003427723 - Not random enough
+    1015031124 - Not random enough
+    2735099951 - Not random enough
+    2234158677 - Not random enough
+    2997873499 - Not random enough
+    710041255 - Not random enough
+    3719389679 - Not random enough
+    3311351202 - Not random enough
+    4181939866 - Not random enough
+    1484993191 - Not random enough
+    1431274521 - Not random enough
+    3631253458 - Not random enough
+    897698288 - Not random enough
+    1372325334 - Not random enough
+    2458985342 - Not random enough
+    1262037485 - Not random enough
+    1092636434 - Not random enough
+    4244183022 - Not random enough
+    3713275916 - Not random enough
+    683276978 - Not random enough
+    1628299428 - Not random enough
+    1353872493 - Not random enough
+    874391517 - Not random enough
+    493490162 - Not random enough
+    1430602449 - Not random enough
+    1794002840 - Not random enough
+    3335602811 - Not random enough
+    2593066471 - Not random enough
+    49052744 - Not random enough
+    2507873318 - Not random enough
+    3958489785 - Not random enough
+    4008086036 - Not random enough
+    1631109622 - Not random enough
+    3900840568 - Not random enough
+    166085386 - Not random enough
+    3273979670 - Not random enough
+    681176531 - Not random enough
+    967467844 - Not random enough
+    3666440909 - Not random enough
+    1945601715 - Not random enough
+    2209018697 - Not random enough
+    325073066 - Not random enough
+    4007348276 - Not random enough
+    1012447273 - Not random enough
+    3752810759 - Not random enough
+    1709549951 - Not random enough
+    3426822757 - Not random enough
+    2732863804 - Not random enough
+    2114889883 - Not random enough
+    422455322 - Not random enough
+    1660186766 - Not random enough
+    2185267785 - Not random enough
+    3155152508 - Not random enough
+    150969683 - Not random enough
+    4273637147 - Not random enough
+    2475561716 - Not random enough
+    3417834751 - Not random enough
+    2430940207 - Not random enough
+    969420801 - Not random enough
+    2011788984 - Not random enough
+    785793382 - Not random enough
+    3339394040 - Not random enough
+    2256703714 - Not random enough
+    3407243957 - Not random enough
+    444573346 - Not random enough
+    1314602318 - Not random enough
+    3748386673 - Not random enough
+    739489632 - Not random enough
+    1237688943 - Not random enough
+    3330113610 - Not random enough
+    1938962473 - Not random enough
+    2871394548 - Not random enough
+    1213173241 - Not random enough
+    2163060230 - Not random enough
+    921465094 - Not random enough
+    2779584232 - Not random enough
+    2999520452 - Not random enough
+    1653900920 - Not random enough
+    4198028401 - Not random enough
+    3176073025 - Not random enough
+    2803513260 - Not random enough
+    4129482274 - Not random enough
+    1205671406 - Not random enough
+    3855890337 - Not random enough
+    1059922823 - Not random enough
+    1543372990 - Not random enough
+    2755828194 - Not random enough
+    3645171150 - Not random enough
+    1743928667 - Not random enough
+    827587835 - Not random enough
+    3808197247 - Not random enough
+    2478463142 - Not random enough
+    3636844334 - Not random enough
+    3678403123 - Not random enough
+    2335093261 - Not random enough
+    1350064377 - Not random enough
+    2992715784 - Not random enough
+    3258772090 - Not random enough
+    438310386 - Not random enough
+    3977941057 - Not random enough
+    3700511723 - Not random enough
+    2314362279 - Not random enough
+    4243709936 - Not random enough
+    730455873 - Not random enough
+    3243568644 - Not random enough
+    312145894 - Not random enough
+    713927715 - Not random enough
+    3161268856 - Not random enough
+    3908835645 - Not random enough
+    934532386 - Not random enough
+    74183283 - Not random enough
+    3992175405 - Not random enough
+    3317443899 - Not random enough
+    4204945228 - Not random enough
+    1486828376 - Not random enough
+    1562418297 - Not random enough
+    1969385385 - Not random enough
+    856959451 - Not random enough
+    2732947387 - Not random enough
+    30722958 - Not random enough
+    1370450439 - Not random enough
+    1566998934 - Not random enough
+    1295805161 - Not random enough
+    2620700987 - Not random enough
+    1199434099 - Not random enough
+    529289501 - Not random enough
+    3763975893 - Not random enough
+    4028830614 - Not random enough
+    520751520 - Not random enough
+    3311900612 - Not random enough
+    482634660 - Not random enough
+    2954423963 - Not random enough
+    3719829990 - Not random enough
+    2619400263 - Not random enough
+    2825798167 - Not random enough
+    2443269314 - Not random enough
+    1132659122 - Not random enough
+    3044230594 - Not random enough
+    1446163563 - Not random enough
+    2583530471 - Not random enough
+    2486665436 - Not random enough
+    3899381118 - Not random enough
+    1982154528 - Not random enough
+    3631034490 - Not random enough
+    261484338 - Not random enough
+    1853182858 - Not random enough
+    3054559307 - Not random enough
+    1492981527 - Not random enough
+    1416962891 - Not random enough
+    498812678 - Not random enough
+    290466799 - Not random enough
+    3559579322 - Not random enough
+    4142849363 - Not random enough
+    1190368483 - Not random enough
+    4132681644 - Not random enough
+    3585391315 - Not random enough
+    1004363990 - Not random enough
+    1486085180 - Not random enough
+    3921250064 - Not random enough
+    3133920423 - Not random enough
+    84829078 - Not random enough
+    2096116109 - Not random enough
+    2724818511 - Not random enough
+    3408199999 - Not random enough
+    830126831 - Not random enough
+    569639012 - Not random enough
+    1009298195 - Not random enough
+    543389694 - Not random enough
+    2145393917 - Not random enough
+    2450792661 - Not random enough
+    1844735141 - Not random enough
+    1179767271 - Not random enough
+    4138393679 - Not random enough
+    1116268410 - Not random enough
+    1392040276 - Not random enough
+    957040858 - Not random enough
+    756884524 - Not random enough
+    2624689926 - Not random enough
+    885175003 - Not random enough
+    2474983165 - Not random enough
+    3586029286 - Not random enough
+    2876666397 - Not random enough
+    1188439634 - Not random enough
+    2053738077 - Not random enough
+    2397538831 - Not random enough
+    1205316354 - Not random enough
+    489977583 - Not random enough
+    2440662134 - Not random enough
+    3316975787 - Not random enough
+    3698845386 - Not random enough
+    4232341364 - Not random enough
+    2122919340 - Not random enough
+    4238002175 - Not random enough
+    354913049 - Not random enough
+    1570083507 - Not random enough
+    2833745342 - Not random enough
+    1858356111 - Not random enough
+    1310648279 - Not random enough
+    2550242594 - Not random enough
+    2347395380 - Not random enough
+    444791817 - Not random enough
+    364456789 - Not random enough
+    4129138907 - Not random enough
+    2213128848 - Not random enough
+    1658333189 - Not random enough
+    3701597077 - Not random enough
+    9822988 - Not random enough
+    1760513948 - Not random enough
+    3456717210 - Not random enough
+    3312494712 - Not random enough
+    4009756215 - Not random enough
+    1519506076 - Not random enough
+    1734612535 - Not random enough
+    1531700782 - Not random enough
+    199041669 - Not random enough
+    4151680498 - Not random enough
+    1138973730 - Not random enough
+    379560683 - Not random enough
+    3824595394 - Not random enough
+    2947896443 - Not random enough
+    3326025821 - Not random enough
+    2454785864 - Not random enough
+    291729379 - Not random enough
+    4187633574 - Not random enough
+    1179345339 - Not random enough
+    1413462605 - Not random enough
+    4240980408 - Not random enough
+    3758708764 - Not random enough
+    2025835594 - Not random enough
+    3722271134 - Not random enough
+    810668117 - Not random enough
+    1643360271 - Not random enough
+    3708706084 - Not random enough
+    3617582906 - Not random enough
+    4011118400 - Not random enough
+    368936532 - Not random enough
+    2746485469 - Not random enough
+    2055190880 - Not random enough
+    3260052531 - Not random enough
+    460708533 - Not random enough
+    89485228 - Not random enough
+    3068004487 - Not random enough
+    330299639 - Not random enough
+    3630896621 - Not random enough
+    2862548114 - Not random enough
+    166385955 - Not random enough
+    4042589922 - Not random enough
+    358266370 - Not random enough
+    1623745376 - Not random enough
+    753299083 - Not random enough
+    217239563 - Not random enough
+    2538429302 - Not random enough
+    677410350 - Not random enough
+    2636987461 - Not random enough
+    3782655866 - Not random enough
+    2874348487 - Not random enough
+    2329560141 - Not random enough
+    1884741224 - Not random enough
+    1946163723 - Not random enough
+    3708205964 - Not random enough
+    4087027909 - Not random enough
+    3050168276 - Not random enough
+    991542659 - Not random enough
+    1175405767 - Not random enough
+    3359286753 - Not random enough
+    1226923819 - Not random enough
+    4147742255 - Not random enough
+    1027939503 - Not random enough
+    898604868 - Not random enough
+    2344272338 - Not random enough
+    966072590 - Not random enough
+    2559664770 - Not random enough
+    1169428917 - Not random enough
+    1227093498 - Not random enough
+    3216201095 - Not random enough
+    1230992327 - Not random enough
+    743830905 - Not random enough
+    170262468 - Not random enough
+    2345556202 - Not random enough
+    4240249249 - Not random enough
+    3541379513 - Not random enough
+    2678298304 - Not random enough
+    2650145833 - Not random enough
+    1096237555 - Not random enough
+    2660231049 - Not random enough
+    1253923477 - Not random enough
+    1882113199 - Not random enough
+    2807029164 - Not random enough
+    463071716 - Not random enough
+    47712052 - Not random enough
+    1379472630 - Not random enough
+    3782945689 - Not random enough
+    489275626 - Not random enough
+    3269893243 - Not random enough
+    1477955713 - Not random enough
+    2513705082 - Not random enough
+    3172388462 - Not random enough
+    951331067 - Not random enough
+    8941816 - Not random enough
+    3005760265 - Not random enough
+    790766322 - Not random enough
+    3062182235 - Not random enough
+    1557023084 - Not random enough
+    1050221035 - Not random enough
+    3322170598 - Not random enough
+    48239589 - Not random enough
+    3425887652 - Not random enough
+    <Redacted!> - Perfect!
+  -->
+  
+</html>
+

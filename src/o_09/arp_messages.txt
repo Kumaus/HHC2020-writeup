@@ -1,0 +1,31 @@
+ARP request
+###[ Ethernet ]### 
+  dst       = ff:ff:ff:ff:ff:ff
+  src       = 4c:24:57:ab:ed:84
+  type      = ARP
+###[ ARP ]### 
+     hwtype    = 0x1
+     ptype     = IPv4
+     hwlen     = 6
+     plen      = 4
+     op        = who-has
+     hwsrc     = 4c:24:57:ab:ed:84
+     psrc      = 10.6.6.35
+     hwdst     = 00:00:00:00:00:00
+     pdst      = 10.6.6.53
+
+ARP response
+###[ Ethernet ]### 
+  dst       = 4c:24:57:ab:ed:84
+  src       = 02:42:0a:06:00:07
+  type      = ARP
+###[ ARP ]### 
+     hwtype    = 0x1
+     ptype     = IPv4
+     hwlen     = 6
+     plen      = 4
+     op        = is-at
+     hwsrc     = 02:42:0a:06:00:07
+     psrc      = 10.6.6.53
+     hwdst     = 4c:24:57:ab:ed:84
+     pdst      = 10.6.6.35

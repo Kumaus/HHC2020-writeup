@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Castle Elevator</title>
+  <script src="conduit.js"></script>
+  <script src="jquery.min.js"></script>
+  <script src="js/lodash.min.js"></script>
+  <script src="js/planck-with-testbed.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class='box-parent'>
+      <canvas id='stage' class='juice' width='563' height='600'></canvas>
+      <div class='glow red'></div>
+      <div class='glow yellow'></div>
+      <div class='glow green'></div>
+      <div class='led red'></div>
+      <div class="led yellow"></div>
+      <div class="led green"></div>
+      <div class='print-indicator'></div>
+      <div class='help-overlay'></div>
+      <button class='reset-btn'>Reset Configuration</button>
+      <button class='help-btn'>Help</button>
+    </div>
+    <div class='cover'>
+      <div class='localstorage-error'><strong>Heads up:</strong> Your Santavator repair configuration cannot be accessed or saved in incognito mode.</div>
+      <img class='f15btn' src='images/floor1-5button.png'/>
+      <div class='key'></div>
+      <div class='print-cover'></div>
+      <button class='btn btn1' data-floor='1'>1</button>
+      <button class='btn btn15' data-floor='1.5'>1.5</button>`
+      <button class='btn btn2' data-floor='2'>2</button>
+      <button class='btn btn3' data-floor='3'>3</button>
+      <button class='btn btnr' data-floor='r'>R</button>
+    </div>
+  <script src="app.js"></script>
+</body>
+</html>
