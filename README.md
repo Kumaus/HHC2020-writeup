@@ -1,7 +1,7 @@
 # SANS Holiday Hack Challenge 2020
 ## Kringlecon 3 - French Hens
 
-Homepage: https://holidayhackchallenge.com/2020/  \
-Writeup: https://kumaus.github.io/HHC2020-writeup/
+Writeup: https://kumaus.github.io/HHC2020-writeup/  \
+Homepage: https://holidayhackchallenge.com/2020/  
 
 ![Me and Jack](/img/intro/me_and_jack.png)
