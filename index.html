@@ -2171,7 +2171,7 @@ echo "Something is wrong with this page! Please use http://localhost/maintenance
     as parameters to download adapted versions of those images from the server, for inclusion
     in the tag.
   </p>
-  <img src="/img/o_08/upload_messages.png" class="centered" width="600px">
+  <img src="img/o_08/upload_messages.png" class="centered" width="600px">
   <p>
     This HTTP exchange can be observed with an intercepting proxy (burp, ZAP) 
     or simply through the browser tools, but doesn't reveal much by itself. To find 
@@ -2179,7 +2179,7 @@ echo "Something is wrong with this page! Please use http://localhost/maintenance
     unwanted input, hoping to trigger revealing error messages. For example, 
     uploading a text file instead of an image file causes the error:
   </p>
-  <img src="/img/o_08/error_unsupported.png" class="centered" width="400px">
+  <img src="img/o_08/error_unsupported.png" class="centered" width="400px">
   <p>
     which tells us that the web application is written in <b>Ruby</b>, with 
     source at <b>/app/lib/app.rb</b>. It also shows that the directory <b>/tmp</b>
@@ -2267,7 +2267,7 @@ APP_HOME=/app PORT=4141 HOST=0.0.0.0 <mark class="answer">GREETZ=JackFrostWasHer
     routes are defined in app.rb within the module <b>TagGenerator</b>. 
     As an overview:
   </p>
-  <img src="/img/o_08/endpoints.png" class="centered" width="600px">
+  <img src="img/o_08/endpoints.png" class="centered" width="600px">
   <p>
     Curiously, the routes /share, /save and /clear are not actually 
     used by the tag generator. 
@@ -2440,7 +2440,7 @@ end </pre>
     an irritating error log. A more stealthy approach would be to include two 
     files in the zip archive: a real immage, followed by a dummy carrying an extended exploit.
   </p>
-  <img src="/img/o_08/stealthy_zip.png" class="centered" height="60px">
+  <img src="img/o_08/stealthy_zip.png" class="centered" height="60px">
   <p>
     No errors are generated, and the image download also works as it should.  
   </p>
